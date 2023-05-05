@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Задание 6</title>
+  </head>
+  <body>
+      <h1>Задание 6</h1>
+      <p>
+        Написать код приложения, интерфейс которого состоит из двух <em>input</em> и
+        кнопки. В input можно ввести любое число.
+      </p>
+      <ul class="dotz">
+        <li>Заголовок первого <em>input</em> — «номер страницы».</li>
+        <li>Заголовок второго <em>input</em> — «лимит».</li>
+        <li>Заголовок кнопки — «запрос».</li>
+      </ul>
+      <p>При клике на кнопку происходит следующее:</p>
+      <ul class="dotz">
+        <li>
+          Если число в первом <em>input</em> не попадает в диапазон от 1 до 10 или не
+          является числом — выводится ниже текст «Номер страницы вне диапазона
+          от 1 до 10».
+        </li>
+        <li>
+          Если число во втором <em>input</em> не попадает в диапазон от 1 до 10 или не
+          является числом — выводится ниже текст «Лимит вне диапазона от 1 до
+          10».
+        </li>
+        <li>
+          Если и первый, и второй <em>input</em> не в диапазонах или не являются числами
+          — выводится ниже текст «Номер страницы и лимит вне диапазона от 1 до
+          10».
+        </li>
+        <li>
+          Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL
+          <em>https://picsum.photos/v2/list?page=1&limit=10</em>, где GET-параметр <em>page</em> —
+          это число из первого <em>input</em>, а GET-параметр <em>limit</em> — это введённое число
+          второго <em>input</em>.
+        </li>
+      </ul>
+      <p>После получения данных вывести список картинок на экран.</p>
+      <p>
+        Если пользователь перезагрузил страницу, то ему должны показываться
+        картинки из последнего успешно выполненного запроса (использовать
+        <em>localStorage</em>).
+      </p>
+    <section>
+        <input type="text" placeholder="Номер страницы" id="inputNumber">
+        <input type="text" placeholder="Лимит" id="inputLimit">
+        <button id="button">Запрос</button>
+        <div id="resultHTML"></div>
+        <ul id="taskList" class="images"></ul>
+    </section>
+    <p>
+      После проверки, можно принудительно очистить <em>localStorage</em>&nbsp;
+      <button id="cleaning">Очистить</button>
+    </p>
+    <a href="../index.html">К содержанию</a>
+    <script src="script.js"></script>
+  </body>
+</html>

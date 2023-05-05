@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Задание 5</title>
+  </head>
+  <body>
+    <h1>Задание 5</h1>
+    <p>
+      Написать код приложения, интерфейс которого состоит из поля ввода и кнопки
+      «Получить список задач». При нажатии на кнопку нужно отправить запрос с
+      помощью fetch на URL <em>https://jsonplaceholder.typicode.com/users/3/todos</em>.
+      Число 3 представляет собой id пользователя, вместо него нужно подставить
+      число, введенное в поле. Если пользователь с таким id существует, вернется
+      список задач для этого пользователя, каждая задача представлена объектом.
+    </p>
+    <p>
+      Где <em>title</em> — описание задачи, а <em>completed</em> — флаг, отображающий, выполнена
+      задача или нет. Вывести данный список на страницу, оформив соответствующим
+      образом: в виде списка (<em>ul</em> или <em>ol</em>), выполненные задачи должны быть
+      написаны зачеркнутым текстом. Если пользователь с введенным id не
+      существует, вывести сообщение: «Пользователь с указанным id не найден».
+    </p>
+    <section>
+        <input type="text" placeholder="Введите ID, число" id="input">
+        <button id="button">Получить список задач</button>
+        <div id="resultHTML"></div>
+        <ol id="taskList"></ol>
+    </section>
+    <a href="../index.html">К содержанию</a>
+    <script src="script.js"></script>
+  </body>
+</html>
